@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Sinch Flows Brand Tokens */
+  --color-brand-black: #000000;
+  --color-primary-dark: #171717;
+  --color-secondary-dark: #242424;
+  --color-graphite: #303030;
+  --color-brand-yellow: #F5C332;
+  --color-yellow-hover: #E6B52C;
+  --color-soft-yellow: #FFF7D6;
+}
+
+:root {
+  --bg-workspace: #F7F8FA;
+  --bg-card: #FFFFFF;
+  --bg-subtle: #F1F3F5;
+  --border-main: #E5E7EB;
+  --text-main: #111827;
+  --text-muted: #6B7280;
+}
+
+.dark {
+  --bg-workspace: #111214;
+  --bg-card: #1C1D21;
+  --bg-subtle: #24262C;
+  --border-main: #2E3038;
+  --text-main: #F3F4F6;
+  --text-muted: #9CA3AF;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-workspace);
+  color: var(--text-main);
+}

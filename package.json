@@ -1,0 +1,17 @@
+{
+  "name": "flows-helpdesk",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Flows Helpdesk — Enterprise Support Ticketing System (Sinch Flows Ecosystem)",
+  "packageManager": "pnpm@10.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "up": "docker compose -f infra/docker/docker-compose.yml --env-file .env up -d --build",
+    "down": "docker compose -f infra/docker/docker-compose.yml down",
+    "logs": "docker compose -f infra/docker/docker-compose.yml logs -f api workers web",
+    "seed": "docker compose -f infra/docker/docker-compose.yml exec api pnpm --filter @flows-helpdesk/api seed"
+  }
+}
